@@ -19,7 +19,7 @@ def proof_of_work(last_proof):
     - p is the previous proof, and p' is the new proof
     - Use the same method to generate SHA-256 hashes as the examples in class
     - Note:  We are adding the hash of the last proof to a number/nonce for the new proof
-    """
+    """ 
 
     start = timer()
 
@@ -40,7 +40,10 @@ def valid_proof(last_hash, proof):
     """
 
     # TODO: Your code here!
-    pass
+    if last_hash[-6:] == proof[:6]: 
+        return True
+    else: 
+        return False
 
 
 if __name__ == '__main__':
